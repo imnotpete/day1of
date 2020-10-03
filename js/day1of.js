@@ -46,15 +46,20 @@ function parseParams() {
 }
 
 function displayDayOf() {
-	let days = startDate.until(today, ChronoUnit.DAYS);
+	let day = startDate.until(today, ChronoUnit.DAYS) + 1;
 	$("#today").text(today);
 	$("#startDate").text(startDate);
-	$("#day").text(days+1);
+	$("#day").text(day);
 
 	if (condition ) {
 		$("#condition").text(condition);
 		$("#conditionContainer").show();
 	}
+
+	let title = document.title;
+	title = title.replace("1", day) + " " + condition;
+	document.title = title;
+
 
 	$("#day1of").show();
 }
