@@ -1,37 +1,42 @@
 <html>
 <head>
+	<title>Day 1 of</title>
 
-<title>Day 1 of</title>
+	<script
+	  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+	  crossorigin="anonymous"></script>
 
-<script
-  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-  crossorigin="anonymous"></script>
+	<script 
+	  src="https://cdnjs.cloudflare.com/ajax/libs/js-joda/1.11.0/js-joda.min.js" 
+	  integrity="sha512-piLlO+P2f15QHjUv0DEXBd4HvkL03Orhi30Ur5n1E4Gk2LE4BxiBAP/AD+dxhxpW66DiMY2wZqQWHAuS53RFDg==" 
+	  crossorigin="anonymous"></script>
 
-<script 
-  src="https://cdnjs.cloudflare.com/ajax/libs/js-joda/1.11.0/js-joda.min.js" 
-  integrity="sha512-piLlO+P2f15QHjUv0DEXBd4HvkL03Orhi30Ur5n1E4Gk2LE4BxiBAP/AD+dxhxpW66DiMY2wZqQWHAuS53RFDg==" 
-  crossorigin="anonymous"></script>
-
-<script src="js/day1of.js"></script>
-
+	<script src="js/day1of.js"></script>
 </head>
 
 <body>
+	<div style="display:none" id="selectDate">
+		<span>Select A Date</span>
+		<form method="get">
+			<label for="startDateInput">Start Date:</label>
+			<input type="text" id="startDateInput" name="startDate"><br><br>
+			<label for="conditionInput">Condition:</label>
+			<input type="text" id="conditionInput" name="condition"><br><br>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
 
-<div style="display:none" id="selectDate">
-	<span>Select A Date</span>
-</div>
-
-<div style="display:none" id="day1of">
-	<p>
-		<span id="startDate"></span> - <span id="today"></span>
-	</p>
-	<p>
-		Today is <strong>Day <span id="day"></span></strong> <span style="display:none" id="conditionContainer">of <strong><span id="condition"></span></strong></span>
-	</p>
-</div>
-
+	<div style="display:none" id="day1of">
+		<p>
+			<span id="startDate"></span> - <span id="today"></span>
+		</p>
+		<p>
+			Today is <strong>Day <span id="day"></span></strong> 
+			<span style="display:none" id="conditionContainer">
+				of <strong><span id="condition"></span></strong>
+			</span>
+		</p>
+	</div>
 </body>
-
 </html>
