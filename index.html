@@ -19,9 +19,18 @@
 
 <body>
 
-<span style="display:none" id="selectDate">Select A Date</span>
+<div style="display:none" id="selectDate">
+	<span>Select A Date</span>
+</div>
 
-<span style="display:none" id="startDate"></span>
+<div style="display:none" id="day1of">
+	<p>
+		<span id="startDate"></span> - <span id="today"></span>
+	</p>
+	<p>
+		Today is Day <span id="day"></span> <span style="display:none" id="conditionContainer">of <span id="condition"></span></span>
+	</p>
+</div>
 
 </body>
 
