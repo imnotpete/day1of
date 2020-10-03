@@ -6,13 +6,14 @@ const today = LocalDate.now();
 var startDate;
 var condition;
 
-$(document).ready(function() {
+$(function() {
+	$("#startDateInput").datepicker();
+	$("#startDateInput").datepicker("option", "dateFormat", "yy-mm-dd");
+
 	let valid = parseParams();
 
 	if (valid) {
 		displayDayOf();
-	} else {
-		displaySelection();
 	}
 
 });
@@ -62,8 +63,4 @@ function displayDayOf() {
 
 
 	$("#day1of").show();
-}
-
-function displaySelection() {
-	$("#selectDate").show();
 }
