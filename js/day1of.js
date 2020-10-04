@@ -7,7 +7,7 @@ var startDate;
 var condition;
 
 $(function() {
-	$("#startDateInput").datepicker();
+	$("#startDateInput").datepicker({maxDate:'0'});
 	$("#startDateInput").datepicker("option", "dateFormat", "yy-mm-dd");
 
 	let valid = parseParams();
